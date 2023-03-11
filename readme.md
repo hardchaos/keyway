@@ -1,53 +1,35 @@
 # Keyway
 ### Persistent environment variables!
+A simple solution to prevent ever uploading your api keys to github. Functions similarly to normal environment variables, except the keys and values will persist through restarts.
 
-```
-import keyway
-kw = keyway.Keyway()
-```
+```import keyway
+kw = keyway.Keyway()```
 
-Set keys like a dictionary
-```
-kw["alpha"] = "an api key"
+Set, access, and delete keys like a dict.
+```kw["alpha"] = "an api key"
 kw["bravo"] = "a setting"
-kw["charlie"] = 42
-```
+kw["charlie"] = 42```
+```kw["alpha"]
+>> "an api key"```
+Delete keys like a dict.
+```del kw["alpha"]```
 
-Access keys like a dictionary
-```
-kw["alpha"]
->> "an api key"
-```
+Missing keys return None.
+```kw["alpha"]
+>> None```
 
-Delete keys like a dictionary
-```
-del kw["alpha"]
-```
-
-Missing keys return None
-```
-kw["alpha"]
->> None
-```
-
-Keys are not stored in memory
-```
-kw.keys()
->> dict_keys([])
-```
+Keys are not stored in memory.
+```kw.keys()
+>> dict_keys([])```
 
 To retrieve a dict of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity.
-```
-kw[all]
->> {'bravo': 'a variable', 'charlie': '42'}
-```
+```kw[all]
+>> {'bravo': 'a variable', 'charlie': '42'}```
 
 To delete all of a user's keys, use the "all" keyword.
-```
-del kw[all]
+```del kw[all]
 kw[all]
-#>> {}
-```
+#>> {}```
 
 * By default, keys are stored in the active environment folder
   * Never upload your virtual environment to github. 
