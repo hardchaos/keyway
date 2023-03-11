@@ -35,7 +35,7 @@ kw.keys()
 #>> dict_keys([])
 ```
 
-To retrieve a dict of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity.
+To retrieve a dictionary of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity.
 ```python
 kw[all]
 #>> {'bravo': 'a variable', 'charlie': '42'}
