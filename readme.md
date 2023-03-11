@@ -1,12 +1,12 @@
 # Keyway
-### persistent environment variables
+### Persistent environment variables!
 
 ```
 import keyway
 kw = keyway.Keyway()
 ```
 
-# set keys like a dictionary
+Set keys like a dictionary
 ```
 kw["alpha"] = "an api key"
 kw["bravo"] = "a setting"
@@ -16,7 +16,7 @@ kw["charlie"] = 42
 Access keys like a dictionary
 ```
 kw["alpha"]
-#>> "an api key"
+>> "an api key"
 ```
 
 Delete keys like a dictionary
@@ -27,21 +27,20 @@ del kw["alpha"]
 Missing keys return None
 ```
 kw["alpha"]
-#> None
+>> None
 ```
 
 Keys are not stored in memory
 ```
 kw.keys()
-#>> dict_keys([])
+>> dict_keys([])
 ```
 
 To retrieve a dict of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity.
 ```
 kw[all]
-#>> {'bravo': 'a variable', 'charlie': '42'}
+>> {'bravo': 'a variable', 'charlie': '42'}
 ```
-
 
 To delete all of a user's keys, use the "all" keyword.
 ```
