@@ -2,11 +2,15 @@
 ### Persistent environment variables!
 A simple solution to prevent accidentally uploading your api keys to github. Functions similarly to normal environment variables, except the keys and values persist through restarts.
 
+```python 
+pip install keyway 
+```
+
+Import with
 ```python
 import keyway
 kw = keyway.Keyway()
 ```
-
 Set, access, and delete keys like a dictionary.
 ```python
 kw["alpha"] = "an api key"
