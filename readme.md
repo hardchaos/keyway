@@ -1,6 +1,6 @@
 # Keyway
 ### Persistent environment variables!
-A simple solution to prevent ever uploading your api keys to github. Functions similarly to normal environment variables, except the keys and values will persist through restarts.
+A simple solution to prevent ever uploading your api keys to github. Functions similarly to normal environment variables, except the keys and values persist through restarts. No dependencies outside of the standard library.
 
 ```import keyway
 kw = keyway.Keyway()```
@@ -9,9 +9,10 @@ Set, access, and delete keys like a dict.
 ```kw["alpha"] = "an api key"
 kw["bravo"] = "a setting"
 kw["charlie"] = 42```
+
 ```kw["alpha"]
 >> "an api key"```
-Delete keys like a dict.
+
 ```del kw["alpha"]```
 
 Missing keys return None.
