@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: keyway
-Version: 1.0.0
+Version: 1.0.1
 Summary: A solution for persistent environment variables.
 Author-email: hardchaos <hardchaos.com@gmail.com>
 Project-URL: Homepage, https://github.com/hardchaos/keyway
@@ -14,13 +14,17 @@ License-File: LICENSE
 
 # Keyway
 ### Persistent environment variables!
-A simple solution to prevent accidentally uploading your api keys to github. Functions similarly to normal environment variables, except the keys and values persist through restarts without having to use Bash.
+A simple solution to prevent accidentally uploading your API keys to GitHub. Functions similarly to normal environment variables, except the keys and values persist through restarts.
 
+```python 
+pip install keyway 
+```
+
+Import with
 ```python
 import keyway
 kw = keyway.Keyway()
 ```
-
 Set, access, and delete keys like a dictionary.
 ```python
 kw["alpha"] = "an api key"
@@ -45,7 +49,7 @@ kw.keys()
 #>> dict_keys([])
 ```
 
-To retrieve a dict of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity.
+To retrieve a dictionary of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity.
 ```python
 kw[all]
 #>> {'bravo': 'a variable', 'charlie': '42'}
