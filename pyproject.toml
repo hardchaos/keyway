@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keyway"
+version = "0.1.0"
+authors = [
+  { name="hardchaos", email="hardchaos.com@gmail.com" },
+]
+description = "A solution for persistent environment variables."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/hardchaos/keyway"
+"Bug Tracker" = "https://github.com/hardchaos/keyway/issues"
