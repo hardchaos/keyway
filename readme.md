@@ -35,7 +35,7 @@ kw.keys()
 #>> dict_keys([])
 ```
 
-To retrieve a dictionary of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity.
+To retrieve a dictionary of all of a user's keys, use the "all" keyword. All keys are stored as text for simplicity. 
 ```python
 kw[all]
 #>> {'bravo': 'a variable', 'charlie': '42'}
@@ -48,7 +48,7 @@ kw[all]
 #>> {}
 ```
 
-* By default, keys are stored in the active environment folder
+* By default, keys are stored in a sqlite database in the active environment folder
   * Never upload your virtual environment to github. 
   * Optionally set a custom path and/or database name like:
     * ``` python
@@ -58,5 +58,13 @@ kw[all]
     * ```python
       kw = keyway.Keyway(user = "username")
       ```
-* Keyway has no dependencies outside of the standard library. 
+  * The "all" keyword can be disabled with
+    * ```python
+      kw = keyway.Keyway(use_all = False)
+      ```
+  * Keys are encrypted using fernet.
+    * This way, there is not a plaintext or easily accessible record of any of the keys.
+    * Moving the database from its original location will cause the data to become unreadable. This is by design, so that even if someone has the database file, they are unable to access the keys without knowing the original path.
+    * The cryptography library is the only external dependency.
+
 * License: MIT
