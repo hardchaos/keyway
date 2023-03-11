@@ -1,6 +1,6 @@
 # Keyway
 ### Persistent environment variables!
-A simple solution to prevent accidentally uploading your api keys to github. Functions similarly to normal environment variables, except the keys and values persist through restarts.
+A simple solution to prevent accidentally uploading your API keys to GitHub. Functions similarly to normal environment variables, except the keys and values persist through restarts.
 
 ```python 
 pip install keyway 
