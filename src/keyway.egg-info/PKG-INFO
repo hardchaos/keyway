@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: keyway
-Version: 1.0.2
+Version: 1.0.3
 Summary: A solution for persistent environment variables.
 Author-email: hardchaos <hardchaos.com@gmail.com>
 Project-URL: Homepage, https://github.com/hardchaos/keyway
